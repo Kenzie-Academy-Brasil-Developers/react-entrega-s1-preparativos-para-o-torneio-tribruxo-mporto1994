@@ -32,7 +32,7 @@ export const StudentSorted2 = styled.div`
     align-items: center;
     /* background-color: #581F18; */
     color:#FFF;
-    color: ${(props)=>props.house};
+    /* color: ${(props)=>props.house}; */
 `
 export const StudentSorted3 = styled.div`
     display:flex;
