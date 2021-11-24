@@ -73,17 +73,22 @@ const Student = ({list}) => {
     //     setNewList(myWizardIndex())
     //     console.log(newList)
     // }
+    
     const houseColor = (house) => {
         let color = ""
         switch (house){
             case "Gryffindor":
-                color = "#C91208"
+                color = "201,18,8"
+                break;
             case "Slytherin" :
-                color = "#045908"
+                color = "4,89,8"
+                break;
             case "Hufflepuff" :
-                color = "#CFB404"
+                color = "207,180,4"
+                break;
             case "Ravenclaw" :
-                color = "#1C7ED4"
+                color = "28,126,212"
+                break;
         }
         return color
     }       
@@ -92,7 +97,7 @@ const Student = ({list}) => {
         <Page>
             
             <Students>
-                {click && <StudentSorted1 house={list[listDone[0]].house}>
+                {click && <StudentSorted1 house={houseColor(list[listDone[0]].house)}>
                     {/* {newList.map((item)=>(<p>{item}</p>))} */}
                     {/* {console.log(stuList)} */}
                     <img src={list[listDone[0]].image}/>
@@ -106,7 +111,7 @@ const Student = ({list}) => {
                     <p>{list[listDone[1]].house}</p> 
                     <p>{list[listDone[1]].gender}</p>
                 </StudentSorted2>)}
-                {click && (<StudentSorted3 house={list[listDone[2]].house}>
+                {click && (<StudentSorted3 house={houseColor(list[listDone[2]].house)}>
                     <img src={list[listDone[2]].image}/>
                     <p>{list[listDone[2]].name}</p>
                     <p>{list[listDone[2]].house}</p>

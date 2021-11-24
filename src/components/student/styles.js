@@ -5,7 +5,7 @@ export const Students = styled.div`
     flex-direction: row;
     width: 800px;
     height: 600px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     img {
         width: 200px;
@@ -22,6 +22,10 @@ export const StudentSorted1 = styled.div`
     justify-content: center;
     align-items: center;
     color:#FFF;
+    border:4px solid  ${(props)=>`rgb(${props.house})`};
+    border-radius:5px;
+    background-color: ${(props)=>`rgb(${props.house},0.5)`};
+    
 
 `
 export const StudentSorted2 = styled.div`
@@ -30,9 +34,10 @@ export const StudentSorted2 = styled.div`
     padding:20px;
     justify-content: center;
     align-items: center;
-    /* background-color: #581F18; */
     color:#FFF;
-    /* color: ${(props)=>props.house}; */
+    border:4px solid  ${(props)=>`rgb(${props.house})`};
+    border-radius:5px;
+    background-color: ${(props)=>`rgb(${props.house},0.5)`};
 `
 export const StudentSorted3 = styled.div`
     display:flex;
@@ -41,7 +46,9 @@ export const StudentSorted3 = styled.div`
     color: black;
     justify-content: center;
     align-items: center;
-    /* background-color: #219ebc; */
+    border:4px solid  ${(props)=>`rgb(${props.house})`};
+    border-radius:5px;
+    background-color: ${(props)=>`rgb(${props.house},0.5)`};
     color:#FFF;
 `
 export const Page = styled.div`
