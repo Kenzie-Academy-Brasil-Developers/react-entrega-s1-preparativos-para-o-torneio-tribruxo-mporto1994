@@ -41,9 +41,10 @@ const Student = ({list}) => {
     // console.log(ranList)
     return ranList
     }
-    const listDone=myWizardIndex()
+    let listDone=myWizardIndex()
+
     const chooseStudents = () => {
-        const listDone=myWizardIndex()
+        listDone=myWizardIndex()
         setNewList(listDone)
 
         const stuu = studentsImages

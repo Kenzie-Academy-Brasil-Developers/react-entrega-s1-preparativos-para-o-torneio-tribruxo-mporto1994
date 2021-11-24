@@ -28,12 +28,11 @@ export const StudentSorted2 = styled.div`
     display:flex;
     flex-direction: column;
     padding:20px;
-    color: black;
     justify-content: center;
     align-items: center;
     /* background-color: #581F18; */
-    color: ${(props)=>props.house};
     color:#FFF;
+    color: ${(props)=>props.house};
 `
 export const StudentSorted3 = styled.div`
     display:flex;
