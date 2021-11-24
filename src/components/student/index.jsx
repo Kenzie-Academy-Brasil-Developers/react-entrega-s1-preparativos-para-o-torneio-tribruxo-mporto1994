@@ -13,7 +13,7 @@ const Student = ({list}) => {
     const [newList,setNewList]=useState(list)
     const {register, handleSubmit} = useForm()
 
-    console.log(list)
+    // console.log(list)
 
     const studentsImages = list.filter((student)=>student.image!="")
     // setNewList(newList.filter((student)=>student.image!=""))
@@ -44,27 +44,30 @@ const Student = ({list}) => {
     let listDone=myWizardIndex()
 
     const chooseStudents = () => {
-        listDone=myWizardIndex()
-        setNewList(listDone)
-
         const stuu = studentsImages
         setStuList(stuu)
-        
-        // console.log(stuList)
-        // console.log(newList +"antes do while")
 
-        // while (list[newList[0]].house != list[newList[1]].house != list[newList[2]].house){
+        let allDif = false
+        console.log(listDone)
+        console.log(stuu)
+        while(allDif===false){
+            listDone=myWizardIndex()
+            console.log(stuu[listDone[0]].house)
+            console.log(stuu[listDone[1]].house)
+            if(stuu[listDone[0]].house!=stuu[listDone[1].house]){
+                allDif=true
+            }
+        }
         
-        //     setNewList(myWizardIndex())
-        //     console.log(newList)
-        // }
+        
 
-        // const ranList = myWizardIndex()
-        // console.log(stuList)
-        // console.log(stuList[newList[1]])
-        // console.log(list[newList[2]])
-        // list[ranList[1]].house
-        // list[ranList[2]].house
+        console.log(listDone)
+
+
+
+        setNewList(listDone)
+        
+        console.log(stuu)
     }
 
     // chooseStudents()
@@ -73,7 +76,7 @@ const Student = ({list}) => {
     //     setNewList(myWizardIndex())
     //     console.log(newList)
     // }
-    
+
     const houseColor = (house) => {
         let color = ""
         switch (house){
